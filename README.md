@@ -1,6 +1,6 @@
 # Election_Analysis
 
-## Project Overview
+## Election Audit Overview
 The Colorado Board of Elections requested an election audit to be performed after all votes were cast. The specific requests for this audit are as follows:
   1. Calculate the total number of votes cast. 
   2. Get a complete list of candidates who recieved votes.
@@ -56,10 +56,12 @@ with open(file_to_load) as election_data:
 ```
 To:
 ```
-with open(variable for desired file path in os package) as election_data:
+with open(variable for file path in os package) as election_data:
     reader = csv.reader(election_data)
 ```
-This would allow the auditor to insert any csv file with election data to run the analysis on. It should be noted that the variable *election_data* can be changed to whatever the auditor selects, so long as the new variable replaces *election_data* throughout the script. 
+This would allow the auditor to insert any csv file with election data to run the analysis on. It should be noted that the variable *election_data* can be changed to whatever the auditor selects, so long as the new variable replaces *election_data* throughout the script. Another way to refactor this code for other elections would be to create different variables and index values based on the csv file. For example, if an auditor recieved data with additional columns that listed cities as well as counties, the same code used in the counties analysis could be applied to cities. This would require declaring new variables just under the county variables.
+
+
 
 
 
