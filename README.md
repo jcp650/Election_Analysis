@@ -8,6 +8,11 @@ The Colorado Board of Elections requested an election audit to be performed afte
   4. Calculate the percentage of votes each candidate won.
   5. Determine the winner of the election based on popular vote.
   
+The Colorado Board of Elections then requested a follow up analysis of the vote break down for each county in the precinct. The requests for this section are as follows:
+  1. Calculate the total number of votes per county.
+  2. Calculate the percentage of votes per county.
+  3. Determine the county with the largest amount of votes.
+  
 ## Resources
 
 - Data Source: election_results.csv
@@ -19,35 +24,25 @@ The election analysis shows that:
 - There were 369,711 total votes cast
 
 The candidates were:
-  - Charles Casper Stockham
-  - Diana DeGette
-  - Raymon Anthony Doane
+- Charles Casper Stockham
+- Diana DeGette
+- Raymon Anthony Doane
   
 The candidate results were:
-  - Charles Casper Stockham recieved 23% of the vote with 85,213 votes.
-  - Diana DeGette recieved 73.8% of the vote with 272,892 votes.
-  - Raymon Anthony Doane recieved 3.1% of the vote with 11,606 votes.
+- Charles Casper Stockham recieved 23% of the vote with 85,213 votes.
+- Diana DeGette recieved 73.8% of the vote with 272,892 votes.
+- Raymon Anthony Doane recieved 3.1% of the vote with 11,606 votes.
   
 The winner of the election was:
-  - Diana DeGette who recieved 73.8% of the vote with 85,213 votes.
+- Diana DeGette who recieved 73.8% of the vote with 85,213 votes.
   
-## County Audit Overview
-The Colorado Board of Elections requested a summary of voter turnout by county. The counties included in the data were Jefferson County, Denver County, and Arapahoe County. The specific request for this summary was to find:
-
-- Total Number of votes per county.
-- Percentage of votes per county.
-- The county with the largest amount of votes.
-
-## County Audit Results
-
 The following information was produced by the counties analysis:
-
 - Jefferson County comprised 10.5% of total votes with 38,855 votes.
 - Denver County comprised 82.8% of total votes with 306,055 votes.
 - Arapahoe County comprised 6.7% of total votes with 24,801 votes. 
 - Denver had the largest amount of votes.
 
-## County Audit Summary
+## Election Audit Summary
 
 The script used for this election audit can be refactored for use in most elections. The most obvious example is inserting different csv files with results from other elections. The code for reading csv files could be changed from:
 ```
