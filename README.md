@@ -55,6 +55,7 @@ with open(variable for file path in os package) as election_data:
     reader = csv.reader(election_data)
 ```
 This would allow the auditor to insert any csv file with election data to run the analysis on. It should be noted that the variable *election_data* can be changed to whatever the auditor selects, so long as the new variable replaces *election_data* throughout the script. 
+
 Another way to refactor this code for other elections would be to create different variables and index values based on the new csv file. For example, if an auditor recieved data with additional columns that listed cities as well as counties, the same code used in the counties analysis could be applied to cities. This would require declaring new variables just under the candidate and county variables:
 ```
 # Create a candidate options list and candidate votes dictionary.
