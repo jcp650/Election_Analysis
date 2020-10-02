@@ -44,7 +44,7 @@ The following information was produced by the counties analysis:
 
 ## Election Audit Summary
 
-The script used for this election audit can be refactored for use in most elections. The most obvious example is inserting different csv files with results from other elections. The code for reading csv files could be changed from:
+The script used for this election audit can be refactored for use in most elections. The most obvious example is inserting different csv files that contain results from other elections. The code for reading csv files could be changed from:
 ```
 with open(file_to_load) as election_data:
     reader = csv.reader(election_data)
@@ -54,7 +54,23 @@ To:
 with open(variable for file path in os package) as election_data:
     reader = csv.reader(election_data)
 ```
-This would allow the auditor to insert any csv file with election data to run the analysis on. It should be noted that the variable *election_data* can be changed to whatever the auditor selects, so long as the new variable replaces *election_data* throughout the script. Another way to refactor this code for other elections would be to create different variables and index values based on the csv file. For example, if an auditor recieved data with additional columns that listed cities as well as counties, the same code used in the counties analysis could be applied to cities. This would require declaring new variables just under the county variables.
+This would allow the auditor to insert any csv file with election data to run the analysis on. It should be noted that the variable *election_data* can be changed to whatever the auditor selects, so long as the new variable replaces *election_data* throughout the script. 
+Another way to refactor this code for other elections would be to create different variables and index values based on the new csv file. For example, if an auditor recieved data with additional columns that listed cities as well as counties, the same code used in the counties analysis could be applied to cities. This would require declaring new variables just under the candidate and county variables:
+```
+# Create a candidate options list and candidate votes dictionary.
+candidate_options = []
+candidate_votes = {}
+
+# Create a counties list and counties votes dictionary.
+counties = []
+county_votes = {}
+
+# Create a cities list and cities vote dictionary.
+cities = []
+city_votes = {}
+```
+The cities list and dictionary could be inserted throughout the script to produce the same results as the counties analysis. This would be helpful to further segment the election data into actionable insights that could inform future elections. Overall, this script is a valauable tool for auditing elections and analyzing the geographic locations of the electorate. 
+
 
 
 
