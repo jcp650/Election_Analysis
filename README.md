@@ -70,7 +70,7 @@ county_votes = {}
 cities = []
 city_votes = {}
 ```
-The cities list and dictionary could be inserted throughout the script to produce the same results as the counties analysis. This would be helpful to further segment the election data into actionable insights that could inform future elections. Overall, this script is a valauable tool for auditing elections and analyzing the geographic locations of the electorate. 
+The cities list and city_votes dictionary could be used by copying and pasting each instance of the counties anaylsis code blocks and replacing the county variables with city variables. This would be helpful to further segment the election data into actionable insights that could inform future elections. Overall, this script is a valauable tool for auditing elections and analyzing the geographic locations of the electorate. The information gathered from this analysis will continue to benefit the Colorado Board of elections if reused for different elections, even with additional columns of data. 
 
 
 
